@@ -1,4 +1,11 @@
+*{
+    color: rgba(78, 33, 11, 0.87);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body{
+    margin:50px;
+}
 
 #card{
     background:rgb(245, 245, 245,0.7);
@@ -6,6 +13,7 @@
     height:400px;
     box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.2);
     border-radius:50px;
+    margin-bottom: 200px;
   }
 
 #card img{
@@ -20,26 +28,53 @@
 #content{
     background-color:rgba(229, 201, 149, 0.411) ;
     margin-top: -10px;
-    height: 100px;
+    height: 150px;
     border-radius:0px 0px 50px 50px;
+    font-size: larger;
+    
    
 }
 
-#desc{
-    padding-top:10px;
-    
-}
-
 #title{
+    padding-top:10px;
     display:flex;
     justify-content:space-around;
 }
+
+#title span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#desc div:first-child{
+    font-size: 1.5em;
+    font-weight: 600;
+    
+}
+
+button{
+    background-color: rgb(240, 189, 108);
+    border-radius: 50px;
+    border-color: rgba(229, 201, 149, 0.411);
+    font-size: 1em;
+    width:180px;
+    height: 40px;  
+}
+
+#button{
+    margin-top:25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 
 /* Navbar */
 
 nav{
-    margin-top: 150px;
     display:flex;
     justify-content:space-around;
     align-items:center;
@@ -59,8 +94,6 @@ nav div{
     width: 105px;
     height: 40px;
     border-radius: 80px;
-    color: rgba(78, 33, 11, 0.87);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
 
     
@@ -77,4 +110,54 @@ nav div:nth-child(3){
 nav div img{
     width:50px;
     height: auto;
+}
+
+/* Flexible article */
+
+#article{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(229, 201, 149, 0.411);
+    width:1200px;
+    height: 400px; 
+    
+}
+
+#img-art{
+    width:500px;
+    margin-left: 30px;
+    height:auto;
+    display:flex;
+    align-items:center;
+    
+}
+
+#img-art img{
+    width:500px;
+    object-fit: fill;
+}
+
+
+#article div:last-child{
+    margin-left:20px;
+}
+
+@media(max-width: 500px) {
+    #article {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width:450px;
+        height: 550px;
+    }
+
+    #img-art img{
+        width:350px;
+        /* object-fit: cover; */
+    }
+    #img-art{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
